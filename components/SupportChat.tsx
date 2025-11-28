@@ -74,7 +74,7 @@ const SupportChat: React.FC = () => {
            {messages.map((msg, idx) => (
              <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                <div className={`max-w-[85%] p-2.5 text-[10px] sm:text-xs leading-relaxed ${msg.role === 'user' ? 'bg-cyan-900/30 text-cyan-50 border border-cyan-800 rounded-tl-lg rounded-tr-lg rounded-bl-lg' : 'text-slate-300 border-l-2 border-cyan-500 pl-3'}`}>
-                 {msg.role === 'model' && <span className="block text-[8px] text-cyan-600 mb-1">>>> RESPONSE:</span>}
+                 {msg.role === 'model' && <span className="block text-[8px] text-cyan-600 mb-1">&gt;&gt;&gt; RESPONSE:</span>}
                  {msg.text}
                </div>
              </div>
